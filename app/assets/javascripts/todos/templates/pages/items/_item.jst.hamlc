@@ -1,5 +1,5 @@
-%li
+%li{:class => if @completed then 'completed' else 'active'}
   .view
-    %input.toggle{type: 'checkbox', checked: (@completed == true)}
+    %input.toggle{type: 'checkbox', checked: (@completed == true), data: {id: @id}}
     %label= @title
-    %button.destroy
+    %button.destroy{data: {id: @id}}

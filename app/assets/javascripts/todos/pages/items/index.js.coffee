@@ -13,6 +13,20 @@ Joosy.namespace 'Items', ->
     elements:
       'newTodoForm': '#new-todo-form'
       'newTodoTitle': '#new-todo'
+      'destroyButton': 'button.destroy'
+      'completeToggle': 'input.toggle'
+
+    events:
+      'click $destroyButton': (element) ->
+        @data.items.findById($(element).data('id')).delete({})
+        @data.items.reload()
+        true
+      'change $completeToggle': (element) ->
+        item = @data.items.findById($(element).data('id'))
+        completed = $(element).prop('checked')
+        item('completed', completed)
+        item.put({})
+        true
 
     @afterLoad ->
       @form = Joosy.Form.attach @newTodoForm,

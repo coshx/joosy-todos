@@ -1,0 +1,5 @@
+%li
+  .view
+    %input.toggle{type: 'checkbox', checked: (@completed == true)}
+    %label= @title
+    %button.destroy

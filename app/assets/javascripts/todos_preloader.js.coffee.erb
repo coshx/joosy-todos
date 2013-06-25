@@ -4,7 +4,7 @@ bootstrap = ->
   $('#preloader').remove()
   Joosy.Application.initialize 'todos','#application',
     environment: window.joosy.environment
-    debug: false
+    debug: true
 
 window.onload = ->
   Preloader.load window.joosy.libraries,

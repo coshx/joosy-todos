@@ -1,0 +1,3 @@
+%ul#todo-list
+  - @data.each (item) =>
+    != @renderDynamic '_item', item

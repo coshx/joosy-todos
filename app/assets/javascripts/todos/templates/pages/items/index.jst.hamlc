@@ -1,15 +1,15 @@
+%header#header
+  %h1 todos
+  %form#new-todo-form
+    %input#new-todo{placeholder: 'What needs to be done?', autofocus: true, name: 'item[title]'}
 %section#main
   %input#toggle-all{type: 'checkbox'}
   %label{for: 'toggle-all'}Mark all as complete
-  %ul#todo-list
-    %li
-      .view
-        %input.toggle{type: 'checkbox'}
-        %label stubbed out item
-        %button.destroy
+  != @renderDynamic '_items', @items
 %footer#footer
   %span#todo-count
-    %strong 0
+    %strong
+      != @renderDynamic '_count', @items
     items left
   %ul#filters
     %li

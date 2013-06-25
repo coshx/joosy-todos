@@ -1,0 +1,19 @@
+%section#main
+  %input#toggle-all{type: 'checkbox'}
+  %label{for: 'toggle-all'}Mark all as complete
+  %ul#todo-list
+    %li
+      .view
+        %input.toggle{type: 'checkbox'}
+        %label stubbed out item
+        %button.destroy
+%footer#footer
+  %span#todo-count
+    %strong 0
+    items left
+  %ul#filters
+    %li
+      %a.selected#filter-all{href: '#'} All
+      %a#filter-active{href: '#'} Active
+      %a#filter-completed{href: '#'} Completed
+  %button#clear-completed Clear completed

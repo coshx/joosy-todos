@@ -1,5 +1,8 @@
 JoosyTodos::Application.routes.draw do
+  resources :items
+
   get 'todos' => 'todos#index'
+  root to: 'todos#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,6 +1,6 @@
 Joosy.Router.map
   404             : (path) -> alert "Page '#{path}' was not found :("
-  '/'             : Welcome.IndexPage
+  '/'             : Items.IndexPage
 # '/resources'    :
 #   '/'           : Resource.IndexPage
 #   '/new'        : Resource.NewPage

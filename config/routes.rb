@@ -1,4 +1,6 @@
 JoosyTodos::Application.routes.draw do
+  get 'todos' => 'todos#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
